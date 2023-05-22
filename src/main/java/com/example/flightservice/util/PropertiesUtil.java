@@ -14,6 +14,10 @@ import static lombok.AccessLevel.PRIVATE;
 public class PropertiesUtil {
     private static final Properties PROPERTIES = new Properties();
 
+    static {
+        loadProperties();
+    }
+
     public static String getProperty(String key) {
         return PROPERTIES.getProperty(key);
     }
