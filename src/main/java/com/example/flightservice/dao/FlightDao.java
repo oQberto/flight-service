@@ -32,7 +32,7 @@ public class FlightDao implements Dao<Long, Flight> {
     @Override
     public List<Flight> findAll() {
         List<Flight> flights = new ArrayList<>();
-        try (Connection connection = ConnectionManager.get();
+        try (Connection connection = ConnectionManager.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(FIND_ALL_SQL)) {
 
             ResultSet resultSet = preparedStatement.executeQuery();
