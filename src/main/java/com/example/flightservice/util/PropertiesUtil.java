@@ -1,16 +1,12 @@
 package com.example.flightservice.util;
 
-import lombok.NoArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.experimental.UtilityClass;
 
 import java.io.InputStream;
 import java.util.Properties;
 
-import static lombok.AccessLevel.PRIVATE;
-
 @UtilityClass
-@NoArgsConstructor(access = PRIVATE)
 public class PropertiesUtil {
     private static final Properties PROPERTIES = new Properties();
 

@@ -17,7 +17,7 @@ public class FlightServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("flights", flightService.findAll());
-        req.getRequestDispatcher(JspHelper.get("flights"))
+        req.getRequestDispatcher(JspHelper.get("flight"))
                 .forward(req, resp);
     }
 }
