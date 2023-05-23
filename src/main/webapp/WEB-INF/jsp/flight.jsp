@@ -14,8 +14,10 @@
 <body>
 <h1>Flights list: </h1>
 <ul>
-    <c:forEach var="flights" items="${requestScope.flights}">
-        <li>${flights.description}</li>
+    <c:forEach var="flight" items="${requestScope.flights}">
+        <li>
+            <a href="${pageContext.request.contextPath}/tickets?flightId=${flight.id}">${flight.description}</a>
+        </li>
     </c:forEach>
 </ul>
 </body>
