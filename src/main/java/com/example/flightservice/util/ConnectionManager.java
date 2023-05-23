@@ -1,10 +1,10 @@
 package com.example.flightservice.util;
 
 import com.zaxxer.hikari.HikariDataSource;
-import lombok.SneakyThrows;
 import lombok.experimental.UtilityClass;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 
 @UtilityClass
 public class ConnectionManager {
@@ -24,8 +24,7 @@ public class ConnectionManager {
         SOURCE.setPassword(PropertiesUtil.getProperty(PASSWORD_KEY));
     }
 
-    @SneakyThrows
-    public static Connection getConnection() {
+    public static Connection getConnection() throws SQLException {
         return SOURCE.getConnection();
     }
 }
