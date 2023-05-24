@@ -74,8 +74,8 @@ public class TicketDao implements Dao<Long, Ticket> {
         return Ticket.builder()
                 .id(resultSet.getLong("id"))
                 .passengerNo(resultSet.getString("passenger_no"))
-                .passengerName(resultSet.getString("passengerName"))
-                .flightId(resultSet.getLong("flightId"))
+                .passengerName(resultSet.getString("passenger_name"))
+                .flightId(resultSet.getLong("flight_id"))
                 .seatNo(resultSet.getString("seat_no"))
                 .cost(resultSet.getDouble("cost"))
                 .build();
